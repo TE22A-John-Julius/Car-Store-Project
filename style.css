@@ -1,0 +1,59 @@
+#Grid_box{
+    display: grid;
+    grid-template-columns: 95vw;
+    grid-template-rows: 10vw 180vw 10vw;
+}
+
+header{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: #2F2F2F;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around ;
+
+}
+
+#logo{
+    height: 6.5vw;
+    width: auto;
+    
+}
+/*Search Bar Settings*/
+
+@font-face {
+    font-family: myFont;
+    src: url(./Fonts/LEMONMILK-Bold.otf);
+}
+
+h3{
+    color: black;
+    font-family: myFont;
+    font-size: calc(0.1rem + 1.5vw)
+    
+}
+
+.Header_Sub_Divs{
+    background-color: white;
+    border-radius: 10vw;
+    height: 4.4vw;
+    width: 18vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 3vw;
+}
+#MagnifyingGlass{
+    height: auto;
+    width: 3vw;
+}
+/*-----*/
+h1{
+   
+}
+
+h2{
+    
+}
