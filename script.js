@@ -62,10 +62,10 @@ function addItemToCart(item, imageUrl, price) {
     document.getElementById('totalPrice').textContent = 'Total: $' + totalPrice.toFixed(2);
 
     // Append image, name, price, and remove button to the new item div
-    newItem.appendChild(itemImage);
-    newItem.appendChild(itemName);
-    newItem.appendChild(itemPrice);
-    newItem.appendChild(removeButton);
+    newItemElement.appendChild(itemImage);
+    newItemElement.appendChild(itemName);
+    newItemElement.appendChild(itemPrice);
+    newItemElement.appendChild(removeButton);
 
     // Append item div to cart container
     cartItemsContainer.appendChild(newItemElement);

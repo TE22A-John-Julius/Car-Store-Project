@@ -382,7 +382,7 @@ footer{
     cursor: pointer;
 }
 #cartWindow {
-    /* your existing styles */
+    
 }
 
 
@@ -401,6 +401,6 @@ footer{
 
 .cart-item img {
     margin-right: 10px;
-    height: 50px; /* Adjust this value as needed */
+    height: 50px; 
 }
 
