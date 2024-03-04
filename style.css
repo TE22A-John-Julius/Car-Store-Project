@@ -224,6 +224,7 @@ h2 {
     margin-bottom: -7vw;
     color: black;
     font-family: myFont;
+ 
     font-size: calc(0.2rem + 3vw)
 }
 .product-div{
@@ -246,8 +247,8 @@ h2 {
 }
 
 /*Products*/
-.tire{
-    height: 12vw;
+.product-resize{
+    height: 13vw;
     width: auto;
 }
 .WB{
