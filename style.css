@@ -228,15 +228,48 @@ h2 {
     font-size: calc(0.2rem + 3vw)
 }
 .product-div{
+    position: relative;
     background-color: white;
-    height: 50px;
-    width: 50px;
+    height: 14vw;
+    width: 14vw;
     border-radius: 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
+.button-add{
+    font-family: myFont;
+    font-size: calc(0.3rem + 1vw);
+    position: absolute;
+    top: 9vw;
+    left: 1.7vw;
+    background-color: #ff6302ec;
+    color: black;
+    border: none;
+    padding: 0.4vw 2.2vw;
+    border-radius: 10vw;
+    cursor: pointer;
+    z-index: 1;
+}
+.wide-button-add{
+    font-family: myFont;
+    font-size: calc(0.3rem + 1vw);
+    position: absolute;
+    top: 9.5vw;
+    left: 8vw;
+    background-color: #ff6302ec;
+    color: black;
+    border: none;
+    padding: 0.4vw 2.2vw;
+    border-radius: 10vw;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
 .wide-product-div{
+    position: relative;
     background-color: white;
     height: 14vw;
     width: 25vw;
@@ -250,6 +283,7 @@ h2 {
 .product-resize{
     height: 13vw;
     width: auto;
+    object-fit: cover;
 }
 .WB{
     width: 23vw;
