@@ -214,7 +214,10 @@ main{
 }
 #flex-item2{
     display: flex;
-
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8vw;
 }
 h2 {
     margin: 0;
@@ -223,5 +226,32 @@ h2 {
     font-family: myFont;
     font-size: calc(0.2rem + 3vw)
 }
+.product-div{
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wide-product-div{
+    background-color: white;
+    height: 14vw;
+    width: 25vw;
+    border-radius: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+/*Products*/
+.tire{
+    height: 12vw;
+    width: auto;
+}
+.WB{
+    width: 23vw;
+    height: auto;
+}
 /*-----*/
