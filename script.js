@@ -1,3 +1,4 @@
+
 // Open Cart
 function openCartWindow() {
     let modal = document.getElementById('cartWindow');
@@ -12,11 +13,26 @@ function closeCartWindow() {
 
 let totalPrice = 0;
 
+let cartItems = []
+
 function addItemToCart(item, imageUrl, price) {
+    //Item object creation
+     let newItem = {
+        item: item,
+        imageUrl: imageUrl,
+        price: price
+    };
+
+     // Add the item to the cart array
+     cartItems.push(newItem);
+
+     // Save the updated cart to local storage
+    saveCartToLocalStorage();
+
     // Item add
     let cartItemsContainer = document.getElementById('cartItems');
-    let newItem = document.createElement('div');
-    newItem.classList.add('cart-item');
+    let newItemElement = document.createElement('div');
+    newItemElement.classList.add('cart-item');
 
     // Create image element
     let itemImage = document.createElement('img');
@@ -36,7 +52,7 @@ function addItemToCart(item, imageUrl, price) {
     let removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
     removeButton.addEventListener('click', function () {
-        removeItemFromCart(newItem, price);
+        removeItemFromCart(newItemElement, price);
     });
 
     // Update total price
@@ -52,17 +68,42 @@ function addItemToCart(item, imageUrl, price) {
     newItem.appendChild(removeButton);
 
     // Append item div to cart container
-    cartItemsContainer.appendChild(newItem);
+    cartItemsContainer.appendChild(newItemElement);
 }
 
 // Function to remove items from cart
 function removeItemFromCart(item, price) {
     item.remove();
+   
+    // Remove item from array
+    cartItems = cartItems.filter(cartItem => cartItem.price !== price);
+    saveCartToLocalStorage();
+
     totalPrice -= price;
 
     // Update total price element
     document.getElementById('totalPrice').textContent = 'Total: $' + totalPrice.toFixed(2);
 }
+
+// Function to save cart to local storage
+function saveCartToLocalStorage() {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+}
+
+// Function to load cart from local storage
+function loadCartFromLocalStorage() {
+    let storedCart = localStorage.getItem('cartItems');
+    if (storedCart) {
+        cartItems = JSON.parse(storedCart);
+        // Display items from local storage
+        cartItems.forEach(cartItem => {
+            addItemToCart(cartItem.item, cartItem.imageUrl, cartItem.price);
+        });
+    }
+}
+
+// Load cart from local storage when the page loads
+loadCartFromLocalStorage();
 
 // Click event to cart button
 let cartButton = document.getElementById('Cart_Button');
