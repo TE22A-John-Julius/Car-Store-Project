@@ -19,7 +19,9 @@
             <div class="Header_Sub_Divs">
                 <h3>SIGN UP</h3>
             </div>
-            <button id="Cart_Button" onclick="shoppingCart()"> <img id="Shopping_Cart" src="./pictures/Cart.webp" alt="Logo of shopping Cart"></button>
+            <a href="#" id="Cart_Button" onclick="shoppingCart()">
+                <img id="Shopping_Cart" src="./pictures/Cart.webp" alt="Logo of shopping Cart">
+            </a>
         </header>
         <div id="Image_Container">
             <h2>FEATURED</h2>
@@ -37,12 +39,14 @@
                 <div class="grid-item">
                     <h2>TIRES</h2>
                     <div class="product-container">
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class ="item-arrows" src="./pictures/arrowleft.webp" alt="arrow facing left">
+                        </div>
                         <div id="flex-item2">
                             <div class="product-div">
-                                <button class="button-add">Add</button>
+                                <button class="button-add" data-item="Red Tire" data-image="./pictures/Red Tire.webp">Add</button>
                                 <img class="product-resize" src="./pictures/Red Tire.webp" alt="Red Toyo Tire">
-                            </div>
+                            </div>  
                             <div class="product-div">
                                 <button class="button-add">Add</button>
                                 <img class="product-resize" src="./pictures/BlueTire.webp" alt="Blue striped custom tire"></div>
@@ -50,14 +54,18 @@
                                 <button class="button-add">Add</button>
                                 <img class="product-resize" src="./pictures/ToyoTirewhite.webp" alt="White Toyo Tire"></div>
                         </div>
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class="item-arrows" src="./pictures/arrowRight.webp" alt="Arrow facing right">
+                        </div>
                     </div>
                 </div>
             
                 <div class="grid-item">
                     <h2>BODY KITS</h2>
                     <div class="product-container">
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class ="item-arrows" src="./pictures/arrowleft.webp" alt="arrow facing left">
+                        </div>
                         <div id="flex-item2">
                             <div class="wide-product-div">
                                 <button class="wide-button-add">Add</button>
@@ -66,14 +74,18 @@
                                 <button class="wide-button-add">Add</button>
                                 <img class="WB" src="./pictures/350zWBRocketbunny.webp" alt="Rocket Bunny 350z Widebody kit"></div>
                         </div>
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class="item-arrows" src="./pictures/arrowRight.webp" alt="Arrow facing right">
+                        </div>
                     </div>
                 </div>
             
                 <div class="grid-item">
                     <h2>RIMS</h2>
                     <div class="product-container">
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class ="item-arrows" src="./pictures/arrowleft.webp" alt="arrow facing left">
+                        </div>
                         <div id="flex-item2">
                             <div class="product-div">
                                 <button class="button-add">Add</button>
@@ -85,14 +97,18 @@
                                 <button class="button-add">Add</button>
                                 <img class ="product-resize" src="./pictures/brassRim.webp" alt="Brass Rim GT Form"></div>
                         </div>
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class="item-arrows" src="./pictures/arrowRight.webp" alt="Arrow facing right">
+                        </div>
                     </div>
                 </div>
             
                 <div class="grid-item">
                     <h2>WHEELS</h2>
                     <div class="product-container">
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class ="item-arrows" src="./pictures/arrowleft.webp" alt="arrow facing left">
+                        </div>
                         <div id="flex-item2">
                             <div class="product-div">
                                 <button class="button-add">Add</button>
@@ -104,14 +120,18 @@
                                 <button class="button-add">Add</button>
                                 <img class ="product-resize" src="./pictures/Sparco Wheel.webp" alt="Sparco Wheel"></div>
                         </div>
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class="item-arrows" src="./pictures/arrowRight.webp" alt="Arrow facing right">
+                        </div>
                     </div>
                 </div>
             
                 <div class="grid-item">
                     <h2>EXHAUST</h2>
                     <div class="product-container">
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class ="item-arrows" src="./pictures/arrowleft.webp" alt="arrow facing left">
+                        </div>
                         <div id="flex-item2">
                             <div class="product-div">
                                 <button class="button-add">Add</button>
@@ -123,13 +143,17 @@
                                 <button class="button-add">Add</button>
                                 <img class ="product-resize" src="./pictures/DualTip Exhaust.webp" alt="Dual BlueTip Exhaust"></div>
                         </div>
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class="item-arrows" src="./pictures/arrowRight.webp" alt="Arrow facing right">
+                        </div>
                     </div>
                 </div>
                 <div class="grid-item">
                     <h2>UNDERGLOW</h2>
                     <div class="product-container">
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class ="item-arrows" src="./pictures/arrowleft.webp" alt="arrow facing left">
+                        </div>
                         <div id="flex-item2">
                             <div class="product-div">
                                 <button class="button-add">Add</button>
@@ -141,14 +165,39 @@
                                 <button class="button-add">Add</button>
                                 <img class ="product-resize" src="./pictures/UnderGlow kit1.webp" alt="Under glow kit 3"></div>
                         </div>
-                        <div class="flex-item"></div>
+                        <div class="flex-item">
+                            <img class="item-arrows" src="./pictures/arrowRight.webp" alt="Arrow facing right">
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
         <footer>
-            
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-text">TOS</div>
+                    <div class="footer-text">CONTACT US</div>
+                </div>
+                <div class="footer-item">© 2024 Omega industries,  inc. All rights reserved</div>
+                <div class="footer-container">
+                    <div class="footer-text">SHIPPING</div>
+                    <div class="footer-text">SOCIALS</div>
+                </div>
+            </footer>
         </footer>
-    </div>    
+    </div>
+   
+<div id="cartWindow" class="window">
+    <div class="window-content">
+      
+      <span class="close" onclick="closeCartWindow()">&times;</span>
+      <div id="top-border">
+        <h2 id="cart-header">Shopping Cart</h2>
+      </div>
+      
+      <div id="cartItems"></div>
+    </div>
+  </div>
+    
 </body>
 </html>
