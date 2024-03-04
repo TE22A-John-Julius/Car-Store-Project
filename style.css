@@ -1,15 +1,14 @@
+
 body {
     margin: 0;
     padding: 0;
 }
 
-#Grid_box{
+#Grid_box{  
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 10vw 180vw 10vw;
-    margin: 0;
-    padding: 0;
-    border: none;
+    grid-template-rows: 10vw 30vw 145vw 10vw;
+
 }
 
 header{
@@ -75,6 +74,9 @@ h3{
 
 /*Image Slider Container*/
 #Image_Container{
+    grid-row: 2/3;
+    grid-column: 1/2;
+
     background-color: #D9D9D9;
     width:auto;
     height: 30vw;
@@ -172,4 +174,54 @@ h3{
     height: auto;
     width: 6vw;
 }
+/*-----*/
+
+/*Product Purchases*/
+main{
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -4vw;
+}
+.grid-item {
+    width: 75vw;
+    height: 20vw;
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #2F2F2F;
+    border-radius: 2vw;
+    margin-bottom: -10vw;
+}
+.flex-item {
+    width: 7vw;
+    height: 17vw;
+    background-color: #8D8D8D;
+    border-radius: 2vw;
+}
+#flex-item2{
+    display: flex;
+
+}
+h2 {
+    margin: 0;
+    margin-bottom: -7vw;
+    color: black;
+    font-family: myFont;
+    font-size: calc(0.2rem + 3vw)
+}
+
 /*-----*/
