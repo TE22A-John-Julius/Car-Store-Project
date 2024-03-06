@@ -188,13 +188,9 @@ h3{
 main{
   grid-row: 3/4;
   grid-column: 1/2;
-}
-.grid-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: -4vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .grid-item {
     width: 75vw;
@@ -204,7 +200,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
+    margin-top: -2vh;
 }
 .product-container {
     display: flex;
@@ -404,3 +400,75 @@ footer{
     height: 50px; 
 }
 
+@media screen and (min-width: 641px) and (max-width: 1024px){
+    
+    #Grid_box{  
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 10vw 30vw 91.9vw 12vw;
+    
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 47vw 50vw;
+        grid-column-gap: 3vw;
+        width: auto;
+        height: 50vh;
+    }
+    .grid-item{
+        margin: 0;
+        width: 45vw;
+        height: 20vw;
+        margin-left: 2vw;
+
+    }
+    .product-container{
+        grid-column: 2/3;
+        width: 110%;
+
+    }
+    .flex-item {
+        width: 7vw;
+        height: 17vw;
+    
+    }
+    #flex-item2{
+        gap: 2vw;
+    }
+    h2 {
+        margin-bottom: -7vw;
+        font-size: calc(0.3rem + 2vw)
+    }
+    .product-div{
+        height: 12vw;
+        width: 12vw
+    }
+    .button-add{
+        top: 8vw;
+        left: 1.9vw;
+    }
+    .wide-button-add{
+        top: 6vw;
+        left: 7vw;
+    }
+    
+    
+    .wide-product-div{
+        height: 10vw;
+        width: 20vw;
+    }
+    
+    .item-arrows{
+        width: 4vw;
+    }
+
+    /*Products*/
+    .product-resize{
+        height: 12vw;
+    }
+    .WB{
+        width: 18vw;
+    }
+
+}
