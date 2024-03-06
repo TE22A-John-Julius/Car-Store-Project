@@ -336,8 +336,8 @@ footer{
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
@@ -359,15 +359,15 @@ footer{
     background-color: #fefefe;
     margin: 10% auto;
     padding: 4vw;
-    border: 1px solid #888;
-    width: 80%;
+    border: 1vw solid #888;
+    width: 80vw;
     height: 100vw;
 }
 
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 10vw;
     font-weight: bold;
 }
 
@@ -377,30 +377,41 @@ footer{
     text-decoration: none;
     cursor: pointer;
 }
-#cartWindow {
-    
-}
-
 
 #cartItems {
     max-height: 75vw; 
     overflow-y: auto;
 }
 .cart-item {
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    padding: 10px;
+    border: 1vw solid #ccc;
+    margin-bottom: 2vw;
+    padding: 2vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: calc(0.5rem + 2vw);
+
 }
 
 .cart-item img {
-    margin-right: 10px;
-    height: 50px; 
+    margin-right: 0;
+    height: 15vw; 
+    width: 15vw;
 }
 
-@media screen and (min-width: 641px) and (max-width: 1024px){
+#totalPrice{
+    font-size: calc(1rem + 2vw);
+    font-weight: bold;
+    margin-top: 4vh;
+}
+
+.remove-button{
+    width: 14vw;
+    height: 3vh;
+    font-size: calc(0.1rem + 2vw);
+}
+
+@media screen and (min-width: 641px) and (max-width: 1007px){
     
     #Grid_box{  
         display: grid;
@@ -414,7 +425,7 @@ footer{
         grid-template-columns: 47vw 50vw;
         grid-column-gap: 3vw;
         width: auto;
-        height: 50vh;
+        height: 65vh;
     }
     .grid-item{
         margin: 0;
@@ -424,7 +435,6 @@ footer{
 
     }
     .product-container{
-        grid-column: 2/3;
         width: 110%;
 
     }
@@ -471,4 +481,154 @@ footer{
         width: 18vw;
     }
 
+}
+@media screen and (min-width: 1008px){
+    #Grid_box{  
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 10vw 30vw 48vw 12vw;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 14vw 14vw 14vw;
+        grid-column-gap: 20vw;
+        width: auto;
+        height: 30vh;
+    }
+    .grid-item{
+        margin: 0;
+        width: 30vw;
+        height: 20vw;
+        margin-left:-7vw;
+
+    }
+    .product-container{
+        width: 32vw;
+        height: 22vh;
+        margin-left: -2vw;
+    }
+    .flex-item {
+        width: 3vw;
+        height: 22vh;
+    
+    }
+    #flex-item2{
+        gap:1vw;
+    }
+    h2 {
+        margin-bottom: -30vh;
+        font-size: calc(0.3rem + 2vw)
+    }
+    .product-div{
+        height: 8vw;
+        width: 8vw
+    }
+    .button-add{
+        top: 8vh;
+        left: 0.1vw;
+    }
+    .wide-button-add{
+        top: 10vh;
+        left: 2.3vw;
+    }
+    
+    
+    .wide-product-div{
+        height: 8vw;
+        width: 12vw;
+    }
+    
+    .item-arrows{
+        width: 4vw;
+    }
+
+    /*Products*/
+    .product-resize{
+        height: 7vw;
+    }
+    .WB{
+        width: 11vw;
+    }
+
+    footer{
+        font-size: calc(0.1rem + 1vw);
+        gap: 22vw;
+    }
+
+    /*Cart*/
+    .window {
+        width: 100vw;
+        height: 100vh;
+      
+    }
+    #top-border{
+        background-color: #2F2F2F;
+        height: 8vw;
+        width: auto ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    #cart-header{
+        color: white;
+        margin-bottom: 0.3vw;
+    }
+    .window-content {
+        background-color: #fefefe;
+        margin: 10% auto;
+        padding: 4vw;
+        border: 1vw solid #888;
+        width: 60vw;
+        height: 50vw;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 8vw;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #cartItems {
+        max-height: 38vw; 
+        overflow-y: auto;
+    }
+    .cart-item {
+        border: 1vw solid #ccc;
+        margin-bottom: 2vw;
+        padding: 0.05vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: calc(0.5rem + 2vw);
+        gap: 1vw;
+
+    }
+
+    .cart-item img {
+        margin-right: 0;
+        height: auto; 
+        width: 2vh;
+    }
+
+    #totalPrice{
+        font-size: calc(1rem + 2vw);
+        font-weight: bold;
+        margin-top: 4vh;
+    }
+
+    .remove-button{
+        width: 12vw;
+        height: 6vh;
+        font-size: calc(0.1rem + 2vw);
+    }
 }

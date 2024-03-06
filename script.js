@@ -51,6 +51,7 @@ function addItemToCart(item, imageUrl, price) {
     // Remove button
     let removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
+    removeButton.className = 'remove-button';
     removeButton.addEventListener('click', function () {
         removeItemFromCart(newItemElement, price);
     });
